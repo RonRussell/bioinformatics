@@ -1,3 +1,23 @@
+
+# Here is the pseudocode:
+
+# 1. For each line of the file, read the line with a CSV reader and do the following
+# 	1. if the line starts with @
+# 		1. if the value of the first column is @HD
+# 			1. discard it
+# 		2. if the value of the first column is @SQ
+# 			1. get the value of second colum in the line
+# 			2. strip the "SN:" from the start of the value
+# 			3. store the remainder of the value as a key in a dictionary with a value of 0
+# 		3. if the value of the first column is @PG
+# 			1. discard it
+# 	2. else (we have an alignment information line)
+# 		1. Place the value from column 3 (Reference sequence) from the line we read into a variable
+# 		2. If the value of column 3 does not contain '*' AND does not contain '0"
+# 			1. Increment the dictionary entry whose value matches the variable from column 3 and increment its value (count) by 1
+# 2. Print out the contents of the dictionary (by key and value) to list the reference sequences and their number of reads
+
+
 import csv
 import sys
 import re

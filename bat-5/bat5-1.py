@@ -1,3 +1,15 @@
+# Here is the pseudocode:
+
+# Read all lines that start with a "@" and discard them because they are not needed
+# For the remaining lines that are left in the file
+# 	read every line with a csv reader and do the following
+# 		assign columns 3 - 9 from the csv reader's last read line to seperate variables 
+# 		increment total count variable
+# 		if all column 3-9 variables contain only (* or 0)
+# 			then increment a non-aligned count variable
+#  after all the lines have been read print out total count variable minus non-aligned count to get the total aligned count 
+
+
 import csv
 import sys
 
