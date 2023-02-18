@@ -12,8 +12,8 @@
 # 		3. if the value of the first column is @PG
 # 			1. discard it
 # 	2. else (we have an alignment information line)
-# 		1. Place the value from column 3 (Reference sequence) from the line we read into a variable
-# 		2. If the value of column 3 does not contain '*' AND does not contain '0"
+# 		1. Place the value from column 3 (Reference sequence) from the line we read into a variable called ref_seq
+# 		2. If the varaible ref_seq does not contain '*' AND does not contain '0"
 # 			1. Increment the dictionary entry whose value matches the variable from column 3 and increment its value (count) by 1
 # 2. Print out the contents of the dictionary (by key and value) to list the reference sequences and their number of reads
 
