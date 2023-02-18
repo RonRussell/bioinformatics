@@ -14,20 +14,9 @@ with open (filename) as file:
 		if line[0][0] == '@' :
 			headercount +=1
 
-
 		else:
-			columns = line
-			one = columns[0]
-			two = columns[1]
-			three = columns[2]
-			four = columns[3]
-			five = columns[4]
-			six = columns[5]
-			seven = columns[6]
-			eight = columns[7]
-			nine = columns[8]
-			ten = columns[9]
-			eleven = columns[10] 
+			three, four, five, six, seven, eight, nine = [line[i] for i in (2, 3, 4, 5, 6, 7, 8)]
+
 			# print(three,four,five,six,seven,eight,nine)
 			if ((three == '*' or three == '0') and
                 (four == '*' or four == '0') and
