@@ -1,0 +1,10 @@
+# Ignore log files
+logs/
+
+# Ignore Mac OS files.
+.DS_Store
+*/.DS_Store
+
+# JetBrains Idea Settings.
+.idea/
+*.iml
