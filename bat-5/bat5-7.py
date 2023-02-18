@@ -56,4 +56,4 @@ with open (filename) as file:
 
 
 print("number of insertions ",insertions)
-print("number of insertions ",deletions)
+print("number of deletions ",deletions)
