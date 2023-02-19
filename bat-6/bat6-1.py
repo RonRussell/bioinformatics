@@ -50,14 +50,14 @@ with open (filename) as file:
         else:
             alignments[key] = [value]
 
-    unique_alignments = {}
-    for key, values in alignments.items() :
-        unique_values = set(values)
-        unique_alignments[key] = list(unique_values)
+unique_alignments = {}
+for key, values in alignments.items() :
+    unique_values = set(values)
+    unique_alignments[key] = list(unique_values)
 
-    unique_alignment_count = 0
-    for key, values in unique_alignments.items() :
-        unique_alignment_count += len (unique_alignments[key])
+unique_alignment_count = 0
+for key, values in unique_alignments.items() :
+    unique_alignment_count += len (unique_alignments[key])
 
 
 print ("Total lines in blast file: ", linecount)
