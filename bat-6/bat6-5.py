@@ -60,8 +60,10 @@ import csv
 import sys
 import collections
 import operator
-from Bio import SeqIO
 
+if (len(sys.argv) != 3) :
+    print("usage: puthon3 bat6-5.py <blast file name> <query file name> <subject file name>")
+    exit(1)
 
 filename = sys.argv[1]
 fasta_query = sys.argv[2]
@@ -154,13 +156,13 @@ for keys, values in best_alignments.items():
                 best_matches[query_id].append((keys, values))
 
 for keys, values in best_alignments.items():
-    for query_id, query_length in sorted_subject_longest.items():
-        if (query_id == keys[1]):
-            if (query_id not in best_matches) :
-                best_matches[query_id] = []
-                best_matches[query_id].append((keys, values))
+    for subject_id, subject_length in sorted_subject_longest.items():
+        if (subject_id == keys[1]):
+            if (subject_id not in best_matches) :
+                best_matches[subject_id] = []
+                best_matches[subject_id].append((keys, values))
             else :
-                best_matches[query_id].append((keys, values))
+                best_matches[subject_id].append((keys, values))
 
 
 for query_id, matches in best_matches.items():
